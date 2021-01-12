@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import JSONEditor from 'jsoneditor/dist/jsoneditor-minimalist';
-import 'jsoneditor/dist/jsoneditor.css';
+import './jsoneditor.css';
 import './fixAce.css';
 
 /**
@@ -144,6 +144,25 @@ export default class Editor extends Component {
         }
     }
 
+    handleChange() {
+        if (this.props.onChange) {
+            try {
+                this.err = null;
+                const text = this.jsonEditor.getText();
+                if (text === '') {
+                    this.props.onChange(null);
+                }
+
+                const currentJson = this.jsonEditor.get();
+                if (this.props.value !== currentJson) {
+                    this.props.onChange(currentJson);
+                }
+            } catch (err) {
+                this.err = err;
+            }
+        }
+    }
+    
     setRef(element) {
         this.htmlElementRef = element;
         if (this.props.innerRef) {
@@ -162,25 +181,6 @@ export default class Editor extends Component {
         });
 
         this.jsonEditor.set(value);
-    }
-
-    handleChange() {
-        if (this.props.onChange) {
-            try {
-                this.err = null;
-                const text = this.jsonEditor.getText();
-                if (text === '') {
-                    this.props.onChange(null);
-                }
-
-                const currentJson = this.jsonEditor.get();
-                if (this.props.value !== currentJson) {
-                    this.props.onChange(currentJson);
-                }
-            } catch (err) {
-                this.err = err;
-            }
-        }
     }
 
     collapseAll() {

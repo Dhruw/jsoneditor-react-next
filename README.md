@@ -1,36 +1,19 @@
-# jsoneditor-react
-[![Version](https://img.shields.io/npm/v/jsoneditor-react.svg)](https://www.npmjs.com/package/jsoneditor-react)
-[![Licence](https://img.shields.io/npm/l/jsoneditor-react.svg)](https://github.com/vankop/jsoneditor-react/blob/master/LICENSE)
-[![Known Vulnerabilities](https://snyk.io/test/github/vankop/jsoneditor-react/badge.svg?targetFile=package.json)](https://snyk.io/test/github/vankop/jsoneditor-react?targetFile=package.json)
+# jsoneditor-react-ext
 
-react wrapper implementation for [josdejong/jsoneditor](https://github.com/josdejong/jsoneditor)
+This is a forked version of the [json-editor-react](https://github.com/vankop/jsoneditor-react)
+When using this as part of a NextJS application we run into the [CSS Import Dependency Issue](https://github.com/vercel/next.js/blob/master/errors/css-npm.md).
+This is a workaround for that.
 
 ## Installation
 
 ```
-npm install --save jsoneditor jsoneditor-react
-```
-
-```jsoneditor-react``` using minimalist version of ```jsoneditor``` to minimize flat bundle size, so if you want to use [Ajv](https://github.com/epoberezkin/ajv) or [Ace Editor](https://github.com/thlorenz/brace) install them as well
-
-## Bundling
-
-Version `3.0.0` and higher provide only es build. Also you need some loaders (in terms of webpack) to load json editor icons and css, e.g.:
-```javascript
-module.exports = {
-  module: {
-    rules: [
-      {test: /\.css$/, loader: 'css-loader'},
-      {test: /\.svg$/, loader: 'file-loader'}
-    ]
-  }
-};
+npm install --save jsoneditor jsoneditor-react-ext
 ```
 
 ## Usage
 
 ```javascript
-import { JsonEditor as Editor } from 'jsoneditor-react';
+import { JsonEditor as Editor } from 'jsoneditor-react-ext';
 import 'jsoneditor-react/es/editor.min.css';
 ```
 
