@@ -1,5 +1,5 @@
 {
-  "name": "jsoneditor-react-ext",
+  "name": "jsoneditor-react-next",
   "version": "1.0.1",
   "description": "React implementation of https://github.com/josdejong/jsoneditor",
   "main": "es",
@@ -19,19 +19,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tsukhu/jsoneditor-react-ext.git"
+    "url": "git+https://github.com/tsukhu/jsoneditor-react-next.git"
   },
   "keywords": [
     "react",
     "jsoneditor",
     "json"
   ],
-  "author": "Ivan Kopeykin",
+  "author": "Ivan Kopeykin, Tarun Kumar Sukhu, Divyanshu Dhruw",
   "license": "MIT",
   "bugs": {
-    "url": "git+https://github.com/tsukhu/jsoneditor-react-ext/issues"
+    "url": "git+https://github.com/tsukhu/jsoneditor-react-next/issues"
   },
-  "homepage": "https://github.com/tsukhu/jsoneditor-react-ext#readme",
+  "homepage": "https://github.com/tsukhu/jsoneditor-react-next#readme",
   "dependencies": {
     "prop-types": "^15.7.2"
   },
