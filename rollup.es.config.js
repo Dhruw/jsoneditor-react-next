@@ -9,7 +9,7 @@ module.exports = {
         sourcemap: true
     },
     plugins: [
-        css({ output: 'es/editor.css' }),
+        css({ output: 'editor.css' }),
         babel({
             exclude: 'node_modules/**'
         }),
