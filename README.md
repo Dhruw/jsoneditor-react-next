@@ -1,4 +1,4 @@
-# jsoneditor-react-ext
+# jsoneditor-react-next
 
 This is a forked version of the [json-editor-react](https://github.com/vankop/jsoneditor-react)
 When using this as part of a NextJS application we run into the [CSS Import Dependency Issue](https://github.com/vercel/next.js/blob/master/errors/css-npm.md).
@@ -7,13 +7,13 @@ This is a workaround for that.
 ## Installation
 
 ```
-npm install --save jsoneditor jsoneditor-react-ext
+npm install --save jsoneditor jsoneditor-react-next
 ```
 
 ## Usage
 
 ```javascript
-import { JsonEditor as Editor } from 'jsoneditor-react-ext';
+import { JsonEditor as Editor } from 'jsoneditor-react-next';
 import 'jsoneditor-react/es/editor.min.css';
 ```
 
