@@ -1,4 +1,4 @@
-const babel = require('rollup-plugin-babel');
+const babel = require('@rollup/plugin-babel');
 const css = require('rollup-plugin-css-only');
 const copy = require('rollup-plugin-copy');
 
